@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class CategoryItem extends StatelessWidget {
-  final String? title;
+  final String title;
   final bool isActive;
   final Function press;
 
   const CategoryItem({
     Key? key,
-    this.title,
+    required this.title,
     this.isActive = false,
     required this.press,
   }) : super(key: key);
@@ -22,7 +22,7 @@ class CategoryItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Column(
           children: [
-            Text(title!,
+            Text(title,
                 style: isActive
                     ? const TextStyle(
                         color: kTextColor,
