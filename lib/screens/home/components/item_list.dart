@@ -22,7 +22,7 @@ class ItemList extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetailsScreen();
+                    return const DetailsScreen();
                   },
                 ),
               );

@@ -39,6 +39,7 @@ class ItemCard extends StatelessWidget {
             child: Column(
               children: [
                 Container(
+                  height: 90,
                   margin: const EdgeInsets.only(bottom: 15),
                   padding: const EdgeInsets.all(25),
                   decoration: BoxDecoration(

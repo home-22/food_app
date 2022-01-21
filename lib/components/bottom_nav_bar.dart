@@ -9,7 +9,7 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-      height: 75,
+      height: 40,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,

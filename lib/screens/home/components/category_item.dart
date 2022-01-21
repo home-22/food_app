@@ -33,7 +33,7 @@ class CategoryItem extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 height: 3,
-                width: 22,
+                width: 25,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(10),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:food_app/components/discount_cart.dart';
+import 'package:food_app/screens/home/components/discount_cart.dart';
 
 import 'package:food_app/components/search_box.dart';
 import 'package:food_app/constants.dart';
