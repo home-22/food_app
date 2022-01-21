@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:food_app/constants.dart';
 import 'package:food_app/screens/details/components/app_bar.dart';
 import 'package:food_app/screens/details/components/item_image.dart';
-import 'package:food_app/screens/home/components/body.dart';
+import 'package:food_app/screens/details/components/title_price_rating.dart';
+
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key? key}) : super(key: key);
@@ -57,25 +59,15 @@ class ItemInfo extends StatelessWidget {
       child: Column(
         children: [
           shopeName(name: "MacDonalds"),
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  children: [],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                height: 66,
-                width: 65,
-                color: kPrimaryColor,
-                child: Text(
-                  "\$15",
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-              ),
-            ],
-          )
+          TitlePriceRating(
+            name: "Cheese Burger",
+            numOfReviews: 24,
+            rating: 4,
+            price: 15,
+            oneRatingChanged: (value) {},
+          ),
+          const Text(
+              "Nowadays, making printed materials hove bacome fast easy and simple. If you")
         ],
       ),
     );
