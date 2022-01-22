@@ -13,8 +13,8 @@ class SearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      margin: const EdgeInsets.all(20),
+      height: 60,
+      margin: const EdgeInsets.symmetric(vertical: 5),
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
@@ -25,6 +25,7 @@ class SearchBox extends StatelessWidget {
       child: TextField(
         onChanged: onChanget,
         decoration: InputDecoration(
+          contentPadding: const EdgeInsets.all(5),
           border: InputBorder.none,
           icon: SvgPicture.asset("assets/icons/search.svg"),
           hintText: "Search Here",

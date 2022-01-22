@@ -21,7 +21,7 @@ class DiscountCart extends StatelessWidget {
           Container(
               margin: const EdgeInsets.symmetric(vertical: 20),
               width: double.infinity,
-              height: 122,
+              height: 220,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
@@ -58,12 +58,12 @@ class DiscountCart extends StatelessWidget {
                               TextSpan(
                                 text: "30% \n",
                                 style: TextStyle(
-                                    fontSize: 43, fontWeight: FontWeight.bold),
+                                    fontSize: 45, fontWeight: FontWeight.bold),
                               ),
                               TextSpan(
                                 text:
                                     "at MacDonald's on your frist order & Instant cashback",
-                                style: TextStyle(fontSize: 10),
+                                style: TextStyle(fontSize: 15),
                               ),
                             ],
                           ),

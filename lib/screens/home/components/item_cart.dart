@@ -5,7 +5,7 @@ import '../../../constants.dart';
 
 class ItemCard extends StatelessWidget {
   final String title, shopName, svgSrc;
-  final Function press;
+  final VoidCallback press;
   const ItemCard({
     Key? key,
     required this.title,
@@ -33,15 +33,14 @@ class ItemCard extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {},
+          onTap: press,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 5),
             child: Column(
               children: [
                 Container(
-                  height: 90,
                   margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.all(25),
+                  padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                   decoration: BoxDecoration(
                     color: kPrimaryColor.withOpacity(0.13),
                     shape: BoxShape.circle,

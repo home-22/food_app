@@ -1,43 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants.dart';
-import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class TitlePriceRating extends StatelessWidget {
   final int price, numOfReviews;
   final double rating;
   final String name;
-  final RatingChangeCallback? oneRatingChanged;
+
   const TitlePriceRating({
     Key? key,
     required this.price,
     required this.numOfReviews,
     required this.rating,
     required this.name,
-    this.oneRatingChanged,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
-        children: [
+        children: <Widget>[
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: <Widget>[
                 Text(
                   name,
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 const SizedBox(height: 10),
-                SmoothStarRating(
-                  borderColor: kPrimaryColor,
-                  rating: rating,
-                  onRated: oneRatingChanged,
+                Row(
+                  children: [
+                    const SizedBox(width: 10),
+                    Text("$numOfReviews reviews"),
+                  ],
                 ),
-                const SizedBox(width: 10),
-                Text("$numOfReviews reviews"),
               ],
             ),
           ),
@@ -53,7 +50,7 @@ class TitlePriceRating extends StatelessWidget {
       child: Container(
         alignment: Alignment.topCenter,
         padding: const EdgeInsets.symmetric(vertical: 15),
-        height: 66,
+        height: 86,
         width: 65,
         color: kPrimaryColor,
         child: Text(
@@ -67,8 +64,6 @@ class TitlePriceRating extends StatelessWidget {
     );
   }
 }
-
-class RatingChangeCallblack {}
 
 class PricerCliper extends CustomClipper<Path> {
   @override
